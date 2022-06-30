@@ -14,7 +14,8 @@ module Authenticator : sig
     type t
 
     val ca_file
-      :  ?allowed_hashes:Mirage_crypto.Hash.hash list
+      :  ?allow_ca_cert:bool
+      -> ?allowed_hashes:Mirage_crypto.Hash.hash list
       -> ?crls:Filename.t
       -> Filename.t
       -> unit
